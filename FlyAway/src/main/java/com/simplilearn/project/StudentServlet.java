@@ -3,8 +3,13 @@ package com.simplilearn.project;
 import jakarta.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.time.LocalDate;
+import com.simplilearn.util.Util;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +19,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class StudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
+	public static final String SEARCH_BY_Source="SELECT * FROM Source WHERE Source = ?";
     public StudentServlet() {
         super();
         // TODO Auto-generated constructor stub
@@ -31,7 +36,8 @@ public class StudentServlet extends HttpServlet {
 			break;
 		case "/Change-password":
 			response.sendRedirect("Change-password.jsp");
-		
+		case "/Flights":
+			response.sendRedirect("search-results.jsp");
 		default:
 			break;
 		}
@@ -50,6 +56,5 @@ public class StudentServlet extends HttpServlet {
 		System.out.println("Numer of People:"+Persons);
 		System.out.println("Date of Travel:"+Date);
 	}
-	
-
+		
 }

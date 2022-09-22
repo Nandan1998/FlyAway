@@ -7,7 +7,6 @@ import java.sql.*;
 		static {
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver"); // MySql Driver
-				//Class.forName("oracle.jdbc.driver.OracleDriver"); // Oracle Drive
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -19,7 +18,7 @@ import java.sql.*;
 		}
 
 		public static Connection getMySqlConnection() throws SQLException {
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/simplilearn", "root","root12345");	
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simplilearn", "root","root12345");	
 			return con;
 		}
 

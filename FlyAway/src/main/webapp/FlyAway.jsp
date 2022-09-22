@@ -35,25 +35,25 @@
 	
 		<div class="form-group">
                     <label for="date">Date: </label>
-                    <input type="date" id="date" name="Date">
+                    <input type="date" id="date" name="date">
                 </div><br><br>
                 <div class="form-group">
                     <label for="source">Source: </label>
-                    <select  class="form-control" id="source" name="Source">
+                    <select  class="form-control" id="source" name="source">
                         <option value="India">Bangalore</option>
-                        <option value="USA">Mysore</option>
                     </select>
                 </div><br><br>
                 <div class="form-group">
                     <label for="destination">Destination: </label>
-                    <select  class="form-control" id="destination" name="Destination">
+                    <select  class="form-control" id="destination" name="destination">
                         <option value="USA">Delhi</option>
                         <option value="UK">Mumbai</option>
+                        <option value="UK">Kolkatta</option>
                     </select>
                 </div><br><br>
                 <div>
                     <label for="persons">No of Persons: </label>
-                    <select class="form-control" id="persons" name="Persons">
+                    <select class="form-control" id="persons" name="persons">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
