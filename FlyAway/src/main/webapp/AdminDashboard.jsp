@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Dashboard</title>
 </head>
 <body>
 
@@ -14,8 +14,8 @@
     <br>
 
 <div>
-      <form action="<%= request.getContextPath() %>/Change-password" method="post">
-      <button>Change Password</button>
+      <form align="center" action="<%= request.getContextPath() %>/Change-password" method="post">
+      <button align="center">Change Password</button>
       </form>
 </body>
 </html>

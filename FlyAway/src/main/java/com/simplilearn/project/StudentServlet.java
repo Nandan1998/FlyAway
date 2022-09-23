@@ -30,19 +30,18 @@ public class StudentServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String path = request.getServletPath();
 		System.out.println("Path:"+path);
+		
 		switch (path) {
 		case "/AdminDashboard":
 			response.sendRedirect("AdminDashboard.jsp");
 			break;
 		case "/Change-password":
 			response.sendRedirect("Change-password.jsp");
-		case "/Flights":
-			response.sendRedirect("search-results.jsp");
-		default:
 			break;
 		}
-		
 	}
+	
+	
 		
 		public static void saveData(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

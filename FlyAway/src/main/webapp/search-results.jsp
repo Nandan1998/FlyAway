@@ -10,6 +10,12 @@
 </head>
 <body>
 	<br><p align="center"><span><strong>Select a flight</strong></span></p><br>
+	
+	<% String boarding= request.getParameter("source");
+	   String landing= request.getParameter("destination");
+	   String persons = request.getParameter("persons");
+	   session.setAttribute("persons",persons);
+	   %>
 <%
 try {
 
@@ -27,21 +33,24 @@ connection = DriverManager.getConnection(connectionURL, "root", "root12345");
 
 statement = connection.createStatement();
 
-String QueryString = "SELECT * FROM Source WHERE Source = 'Bangalore'";
+
+String QueryString = "SELECT * FROM Source WHERE Source = '"+boarding+"' AND Destination='"+landing+"'";
 rs = statement.executeQuery(QueryString);
 %>
-<TABLE align="center">
+<TABLE hover align="center">
 <%
 while (rs.next()) {
 %>
+
 <tr>
 <td>
-	<form action="<%= request.getContextPath() %>/booking-details" method="post" >
+	<form action="<%= request.getContextPath() %>/Registration.jsp" method="post" >
                     <input id="flight" name="flight" value="<%=rs.getString(1)%>">
                     <input id="source" name="source" value="<%=rs.getString(2)%>">
                     <input id="destination" name="destination" value="<%=rs.getString(3)%>">
-                    <input id="ticket" name="tcket" value="<%=rs.getInt(4)%>">
+                    <input id="ticket" name="ticket" value="<%=rs.getInt(4)%>">
                     <button>Book this flight</button>
+                       
                 </form>
 </td>
 </tr>

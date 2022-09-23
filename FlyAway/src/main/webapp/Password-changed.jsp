@@ -8,5 +8,7 @@
 </head>
 <body>
 	<h1> Your password is changed !!!</h1>
+	<% String pswd = request.getParameter("pswd"); 
+	out.println("Your current password is: "+pswd);%>
 </body>
 </html>

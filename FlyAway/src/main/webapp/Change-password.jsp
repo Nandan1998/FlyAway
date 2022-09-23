@@ -10,12 +10,12 @@
  <h1>Password Change</h1>
  <div class="container">
             
-                <form action="change-password" method="post">
+                <form action="Password-changed.jsp" method="post">
                     
                     <div>
-                        <input type="password" id="inputPassword" placeholder="Enter a new password">
+                        <input type="password" id="inputPassword" name="pswd" placeholder="Enter a new password">
                     </div>
-                    <button type="submit">Change Password</button>
+                    <button align="center" type="submit">Change Password</button>
                 </form>
             
     </div>

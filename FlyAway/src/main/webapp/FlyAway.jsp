@@ -7,11 +7,11 @@
 <title>FlyAway Airlines</title>
 </head>
 <body>
-	<h1>FlyAway</h1>
+	<h1 align="center">FlyAway</h1>
 	
 <div>
   
-  <form action="<%= request.getContextPath() %>/AdminDashboard" method="post">
+  <form align="center" action="<%= request.getContextPath() %>/AdminDashboard" method="post">
     
     <div class="container">
       <label for="uname"><b>User name</b></label>
@@ -29,9 +29,9 @@
             
 	<br>
 	
-	<h2>Search Flights</h2><br>
+	<h2 align="center">Search Flights</h2><br>
 	
-	<form action="<%= request.getContextPath() %>/Flights" method="post" >
+	<form align="center" action="<%= request.getContextPath() %>/search-results.jsp" method="post" >
 	
 		<div class="form-group">
                     <label for="date">Date: </label>
@@ -40,15 +40,16 @@
                 <div class="form-group">
                     <label for="source">Source: </label>
                     <select  class="form-control" id="source" name="source">
-                        <option value="India">Bangalore</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mysore">Mysore</option>
                     </select>
                 </div><br><br>
                 <div class="form-group">
                     <label for="destination">Destination: </label>
                     <select  class="form-control" id="destination" name="destination">
-                        <option value="USA">Delhi</option>
-                        <option value="UK">Mumbai</option>
-                        <option value="UK">Kolkatta</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
                     </select>
                 </div><br><br>
                 <div>
